@@ -55,11 +55,11 @@ if ! command_exists zsh; then
     exit 1
 elif ! [[ $SHELL =~ .*zsh.* ]]; then
     echo "Configuring zsh as default shell"
-    chsh -s "$(command -v zsh)"
+    chsh -s $(which zsh)
 fi
 
 # Change the default shell to zsh
-zsh_path="$( command -v zsh )"
+zsh_path="$( which zsh )"
 if ! grep "$zsh_path" /etc/shells; then
     echo "adding $zsh_path to /etc/shells"
     echo "$zsh_path" | sudo tee -a /etc/shells

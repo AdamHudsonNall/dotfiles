@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ln -s "$PWD" ~/.dotfiles
+
 DOTFILES=$HOME/.dotfiles
 
 echo -e "\\nCreating symlinks"

@@ -1,7 +1,19 @@
-set -g default-command "login-shell"
+# set -g default-command "login-shell"
+# see https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+#if command -v reattach-to-user-namespace > /dev/null 2>&1; then
+#    default_shell="$(tmux show -gv default-shell)"
+#    case "$default_shell" in
+#    *fish)
+#        tmux set -g default-command "reattach-to-user-namespace -l $default_shell"
+#        ;;
+#    *sh)
+#        tmux set -g default-command "exec $default_shell... 2> /dev/null & reattach-to-user-namespace -l $default_shell"
+#        ;;
+#    esac
+#fi
 
 # tmux display things in 256 colors
-set -g default-terminal "tmux-256color"
+set -g default-terminal "xterm-256color"
 set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m'
 
 set -g history-limit 20000
