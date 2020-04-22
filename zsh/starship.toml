@@ -1,0 +1,93 @@
+add_newline = true
+
+prompt_order = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_state",
+    "git_status",
+    "package",
+    "dotnet",
+    "golang",
+    "java",
+    "nodejs",
+    "python",
+    "ruby",
+    "rust",
+    "nix_shell",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "cmd_duration",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character",
+]
+
+# Replace the "❯" symbol in the prompt with "⟶"
+[character]                     # The name of the module we are configuring is "character"
+symbol = "﮸"
+#symbol = "➜"                    # The "symbol" segment is being set to "➜"
+#symbol = "⟶"                    # The "symbol" segment is being set to "⟶"
+use_symbol_for_status = true    # Show "✖" when the command failed
+#style_success = "bg:white bold green"
+#style_failure	= "bg:white bold red"
+#style = "bg:white"
+
+[kubernetes]
+disabled = false
+symbol = ""
+prefix = ""
+style = "red"
+
+[directory]
+truncation_length = 3
+prefix = ""
+style = "dimmed white"
+
+[git_branch]                    # The name of the module we are configuring is "git_branch"
+disabled = false
+prefix = "-"
+symbol = " "
+style = "blue"
+
+[git_status]                    #
+conflicted = ""
+ahead = "a"
+behind = "b"
+diverged = ""
+untracked = " "
+stashed = ""
+modified = " "
+staged = ""
+renamed = ""
+deleted = " "
+prefix = ""
+suffix = ""
+style = "bright-white"
+disabled = false
+
+[hostname]                      # The name of the module we are configuring is "hostname"
+ssh_only = false
+prefix = "❮ "
+suffix = "❯"
+style = "dimmed white"
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[package]                       # The name of the module we are configuring is "package"
+disabled = true                 # Disable the package module, hiding it from the prompt completely
+
+[time]                          # The name of the module we are configuring is "time"
+disabled = true
+
+[username]                      # The name of the module we are configuring is "username"
+style_user = "bold dimmed white"
+show_always = true
+suffix = ""

@@ -10,6 +10,7 @@
     # brew install reattach-to-user-namespace
     brew tap homebrew/cask-fonts
     brew cask install font-fira-code # font-jetbrains-mono
+    brew install tmuxinator
     # brew install byobu
 ```
 
@@ -18,7 +19,7 @@
 ```bash
     sudo add-apt-repository universe
     sudo apt-get update
-    sudo apt-get install tmux zsh vim fonts-firacode
+    sudo apt-get install tmux zsh vim tmuxinator fonts-firacode
     # sudo apt-get install byobu
 
     # chsh -s $(which zsh)
